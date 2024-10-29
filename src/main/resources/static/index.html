@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Futuristic Sorting Visualizer</h1>
+            <nav>
+                <button id="doc-button">Documentation</button>
+            </nav>
+        </header>
+        <main>
+            <div class="controls">
+                <div class="input-group">
+                    <label for="array-input">Enter array values (comma-separated):</label>
+                    <input type="text" id="array-input" placeholder="e.g., 64,34,25,12,22,11,90">
+                    <button id="set-array">Set Array</button>
+                </div>
+                <div class="input-group">
+                    <label for="algorithm-select">Select Algorithm:</label>
+                    <select id="algorithm-select">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="selection">Selection Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="merge">Merge Sort</option>
+                        <option value="quick">Quick Sort</option>
+                    </select>
+                </div>
+                <button id="start-sorting">Start Sorting</button>
+                <div class="slider-group">
+                    <label for="speed-slider">Speed:</label>
+                    <input type="range" id="speed-slider" min="1" max="100" value="50">
+                </div>
+            </div>
+            <div class="visualization-container">
+                <canvas id="sorting-canvas"></canvas>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Developed by Suhas, Varun & Rohit.</p>
+        </footer>
+    </div>
+    
+    <div id="documentation" class="documentation">
+        <div class="documentation-content">
+            <h2>Documentation</h2>
+            <button id="close-doc">Close</button>
+            <h3>How to Use</h3>
+            <ol>
+                <li>Enter comma-separated numbers in the input field (e.g., 64,34,25,12,22,11,90).</li>
+                <li>Click "Set Array" to initialize the visualization.</li>
+                <li>Choose a sorting algorithm from the dropdown menu.</li>
+                <li>Adjust the speed using the slider if desired.</li>
+                <li>Click "Start Sorting" to begin the visualization.</li>
+            </ol>
+            <h3>Sorting Algorithms</h3>
+            <h4>Bubble Sort</h4>
+            <p>Time Complexity: O(n²) in worst and average cases, O(n) in best case.</p>
+            <p>Description: Repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.</p>
+            
+            <h4>Selection Sort</h4>
+            <p>Time Complexity: O(n²) in all cases.</p>
+            <p>Description: Divides the input list into two parts: a sorted portion and an unsorted portion. Repeatedly selects the smallest element from the unsorted portion and adds it to the sorted portion.</p>
+            
+            <h4>Insertion Sort</h4>
+            <p>Time Complexity: O(n²) in worst and average cases, O(n) in best case.</p>
+            <p>Description: Builds the final sorted array one item at a time. It iterates through the input elements, growing the sorted array with each iteration.</p>
+            
+            <h4>Merge Sort</h4>
+            <p>Time Complexity: O(n log n) in all cases.</p>
+            <p>Description: Divides the unsorted list into n sublists, each containing one element, then repeatedly merges sublists to produce new sorted sublists until there is only one sublist remaining.</p>
+            
+            <h4>Quick Sort</h4>
+            <p>Time Complexity: O(n log n) on average, O(n²) in worst case.</p>
+            <p>Description: Selects a 'pivot' element and partitions the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
