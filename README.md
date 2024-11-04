@@ -82,5 +82,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Suhas - [suhas.100x@gmail.com](mailto:suhas.100x@gmail.com) 
 
 Project Link: [https://github.com/heysuhas/sortingvisualizer](https://github.com/heysuhas/sortingvisualizer)
-```
 
